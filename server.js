@@ -1,6 +1,4 @@
 require('dotenv').config();
-console.log("🌍 .env loaded");
-
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -12,7 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-console.log("🚀 Connecting to DB...");
+console.log('🌍 .env loaded');
+console.log('🚀 Connecting to DB...');
 
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
@@ -24,10 +23,10 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.error("❌ DB connection failed:", err);
+    console.error('❌ DB connection failed:', err);
     process.exit(1);
   } else {
-    console.log("✅ MySQL connected...");
+    console.log('✅ MySQL connected...');
   }
 });
 
