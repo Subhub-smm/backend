@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const db = mysql.createConnection({
+const db = mysql.createConnection(process.env.DATABASE_URL);
+({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || 'Haffkast@2004',
