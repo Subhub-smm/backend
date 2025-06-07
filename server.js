@@ -23,10 +23,11 @@ const db = mysql.createConnection(process.env.DATABASE_URL);
 
 db.connect((err) => {
   if (err) {
-    console.error('DB connection failed:', err);
-    return;
+    console.error('❌ MySQL connection failed:', err);
+    process.exit(1); // force app to quit with a readable error
+  } else {
+    console.log('✅ MySQL connected...');
   }
-  console.log('MySQL connected...');
 });
 
 app.get('/', (req, res) => {
