@@ -1,8 +1,8 @@
-DB_HOST=localhost
+DB_HOST=mysql.railway.internal
 DB_USER=root
 DB_PASSWORD=HZdQflxncuYhtTFOUFEoLbmCDdXvwSsm
-DB_NAME=smm_panel
-PORT=3000
+DB_NAME=railway
+PORT=3306
 JWT_SECRET=9f6fbd77e1498d34b81a22aef95a7a42dcf3f2b8433a1cbfcbac6c77e3e2c65f
 ADMIN_KEY=Haffkast@2004
 DATABASE_URL=mysql://root:HZdQflxncuYhtTFOUFEoLbmCDdXvwSsm@mysql.railway.internal:3306/railway
